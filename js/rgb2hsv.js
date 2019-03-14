@@ -1,4 +1,4 @@
-const rgbToHsv = (r, g, b) => {
+const rgb2hsv = (r, g, b) => {
   const min = Math.min(r, g, b);
   const max = Math.max(r, g, b);
   const diff = max - min;
@@ -20,7 +20,7 @@ const rgbToHsv = (r, g, b) => {
   return [h, diff / max, max];
 };
 
-const hsvToRgb = (h, s, v) => {
+const hsv2rgb = (h, s, v) => {
   if (!s) {
     return [v, v, v];
   }
